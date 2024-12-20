@@ -11,3 +11,11 @@ Encoding: UTF-8
 
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
+
+```{r cars}
+grandparents <- read.csv("/Users/gracielleli/Downloads/drive-download-20241002T145736Z-001/grandparent_height.csv")
+grandparents
+
+t.test(x = grandparents$child_ht, y = grandparents$gparent_ht)
+lm(child_ht ~ gparent_ht, data = grandparents)
+```
